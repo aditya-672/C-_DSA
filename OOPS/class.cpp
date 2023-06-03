@@ -1,13 +1,7 @@
 #include<iostream>
-#include<string>
-
-class student{
-    string name;
-    int age;
-    bool gender;
-};
+using namespace std;
 
 int main(){
-    String s = "A"
+    string s = "A";
     return 0;
 }
