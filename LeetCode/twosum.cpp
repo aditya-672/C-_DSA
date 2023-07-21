@@ -21,7 +21,6 @@ public:
         {
             for (int j = i + 1; j < size; j++)
             {
-                /* code */
                 if (arr[i] + arr[j] == target)
                 {
                     return {i, j};
@@ -40,14 +39,16 @@ int main()
 
     vector<int> result = s.check();
 
-    if (!result.empty())
-    {
-        cout << "Positions: " << result[0] << ", " << result[1] << endl;
-        cout << "Values: " << arr[result[0]] << ", " << arr[result[1]] << endl;
-    }
-    else
-    {
-        cout << "No solution found." << endl;
-    }
+    // if (!result.empty())
+    // {
+    //     cout << "Positions: " << result[0] << ", " << result[1] << endl;
+    //     cout << "Values: " << arr[result[0]] << ", " << arr[result[1]] << endl;
+    // }
+    // else
+    // {
+    //     cout << "No solution found." << endl;
+    // }
+
+    cout<<"["<<result[0]<<","<<result[1]<<"]"<<endl;
     return 0;
 }
