@@ -58,9 +58,9 @@ void mergeSort(int arr[], int l, int r){
 
 int main()
 {
-    int arr[]={5,3,2,1,4};
-    mergeSort(arr,0,4);
-    for(int i=0;i<5;i++){
+    int arr[]={6,3,9,5,2,8,7,1};
+    mergeSort(arr,0,7);
+    for(int i=0;i<8;i++){
         cout<<arr[i]<<" ";
     }
     return 0;
