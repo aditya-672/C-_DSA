@@ -21,7 +21,7 @@ bool check(string s1,string s2){
     
     for (auto itr:mp)
     {
-        if (itr.second %2 != 0)
+        if (itr.second % 2 != 0)
         {
             return false;
         }
