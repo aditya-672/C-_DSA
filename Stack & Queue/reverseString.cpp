@@ -10,7 +10,8 @@ void reverseString(string s){
         string word = "";
         while (s[i]!=' ' && i<s.length())
         {
-            word+=s[i];
+            word.push_back(s[i]);
+            // word+=s[i];
             i++;
         }
         str.push(word);

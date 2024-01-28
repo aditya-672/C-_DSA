@@ -16,25 +16,70 @@ struct Node
     }
 };
 
-bool isBalanced(Node *root, int *height)
+// bool isBalanced(Node *root, int *height)
+// {
+//     if(root == NULL){
+//         return true;
+//     }
+
+//     int lh = 0, rh = 0;
+
+//     if (isBalanced(root->left, &lh) == false)
+//     {
+//         return false;
+//     }
+
+//     if (isBalanced(root->right, &rh) == false)
+//     {
+//         return false;
+//     }
+
+//     *height = max(lh, rh) + 1;
+
+//     if (abs(lh - rh) <= 1)
+//     {
+//         return true;
+//     }
+//     else
+//     {
+//         return false;
+//     }
+// }
+
+//the above is alternative
+
+int height(Node* root){
+    if (root==NULL)
+    {
+        return 0;
+        /* code */
+    }
+    
+    int lh = height(root->left);
+    int rh = height(root->right);
+
+    return max(lh,rh) + 1;
+}
+
+bool isBalanced(Node *root)
 {
     if(root == NULL){
         return true;
     }
-
-    int lh = 0, rh = 0;
-
-    if (isBalanced(root->left, &lh) == false)
+    if (isBalanced(root->left) == false)
     {
         return false;
     }
 
-    if (isBalanced(root->right, &rh) == false)
+    if (isBalanced(root->right) == false)
     {
         return false;
     }
 
-    *height = max(lh, rh) + 1;
+    
+    int lh = height(root->left); 
+    int rh = height(root->right);
+
 
     if (abs(lh - rh) <= 1)
     {
