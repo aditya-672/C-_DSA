@@ -102,7 +102,7 @@ int main()
     // root->right->right = new Node(7);
     int height = 0;
 
-    if (isBalanced(root, &height) == true)
+    if (isBalanced(root) == true)
     {
         cout << "Balanced Tree" << endl;
     }
